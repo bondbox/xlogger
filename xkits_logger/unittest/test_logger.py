@@ -61,8 +61,14 @@ class TestLogger(unittest.TestCase):
     def test_new_file_handler(self):
         logger.Logger.new_file_handler("unittest.log")
 
-    def test_stdout_and_stdout(self):
+    def test_stdout(self):
+        logger.Logger.stdout_yellow("warning")
         logger.Logger.stdout_green("ok")
+        logger.Logger.stdout_red("fail")
+
+    def test_stderr(self):
+        logger.Logger.stderr_yellow("warning")
+        logger.Logger.stderr_green("ok")
         logger.Logger.stderr_red("fail")
 
 

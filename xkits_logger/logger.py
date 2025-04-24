@@ -143,15 +143,35 @@ class Logger:
         sys.stdout.flush()
 
     @classmethod
+    def stdout_yellow(cls, context: Any):
+        '''Output string to sys.stdout with yellow color.'''
+        cls.stdout(Color.yellow(context))
+
+    @classmethod
     def stdout_green(cls, context: Any):
         '''Output string to sys.stdout with green color.'''
         cls.stdout(Color.green(context))
+
+    @classmethod
+    def stdout_red(cls, context: Any):
+        '''Output string to sys.stdout with red color.'''
+        cls.stdout(Color.red(context))
 
     @classmethod
     def stderr(cls, context: Any):
         '''Output string to sys.stderr.'''
         sys.stderr.write(f"{context}\n")
         sys.stderr.flush()
+
+    @classmethod
+    def stderr_yellow(cls, context: Any):
+        '''Output string to sys.stderr with yellow color.'''
+        cls.stderr(Color.yellow(context))
+
+    @classmethod
+    def stderr_green(cls, context: Any):
+        '''Output string to sys.stderr with green color.'''
+        cls.stderr(Color.green(context))
 
     @classmethod
     def stderr_red(cls, context: Any):
