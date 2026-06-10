@@ -15,7 +15,7 @@ from typing import TextIO
 from colorlog import ColoredFormatter
 from colorlog.formatter import LogColors
 
-from xkits_logger.attribute import __project__
+from xkits_logger.attribute import __project_name__
 from xkits_logger.colorful import Color
 
 
@@ -78,7 +78,7 @@ class Logger:
         return name in self.__initiated_names
 
     def get_logger(self, name: Optional[str] = None) -> logging.Logger:
-        return logging.getLogger(name or __project__)
+        return logging.getLogger(name or __project_name__)
 
     def initiate_logger(self, logger: logging.Logger,
                         level: Optional[str] = None,

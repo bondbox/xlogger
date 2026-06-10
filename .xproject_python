@@ -1,0 +1,30 @@
+name = "xlogger"
+home = "https://github.com/bondbox/xlogger/"
+description = "Logging module"
+keywords = [ "colorama", "colorlog", "logger", "logging",]
+version = "0.2"
+
+[authors.zoumingzhe]
+name = "Mingzhe Zou"
+email = "zoumingzhe@outlook.com"
+
+[packages.xkits-logger]
+requires_python = ">=3.8"
+authors = [ "zoumingzhe",]
+keywords = []
+requirements = [ "colorama", "colorlog",]
+max_complexity = 10
+max_line_length = 127
+
+[packages.xkits-logger.modules.xkits-logger]
+base = "xkits_logger"
+omitted = [ "unittest/*", "attribute.py",]
+exclude = [ "unittest",]
+
+[packages.xkits-logger.modules.xkits-logger.include]
+
+[packages.xkits-logger.modules.xkits-logger.scripts]
+
+[packages.xkits-logger.modules.xkits-logger.templates]
+"__init__.py" = false
+"attribute.py" = true
