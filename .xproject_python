@@ -2,7 +2,7 @@ name = "xlogger"
 home = "https://github.com/bondbox/xlogger/"
 description = "Logging module"
 keywords = [ "colorama", "colorlog", "logger", "logging",]
-version = "0.2"
+version = "0.3"
 
 [authors.zoumingzhe]
 name = "Mingzhe Zou"
